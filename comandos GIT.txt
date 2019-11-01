@@ -1,0 +1,122 @@
+staging area : es donde los archivos se preparan para un repository
+repository
+
+
+CESCA@LAB02-PC03 MINGW64 ~/Desktop/Nueva carpeta
+$ touch index.html
+
+CESCA@LAB02-PC03 MINGW64 ~/Desktop/Nueva carpeta
+$ ls
+index.html
+
+CESCA@LAB02-PC03 MINGW64 ~/Desktop/Nueva carpeta
+$ ls -al
+total 4
+drwxr-xr-x 1 CESCA 197121 0 oct 31 19:03 ./
+drwxr-xr-x 1 CESCA 197121 0 oct 31 19:01 ../
+-rw-r--r-- 1 CESCA 197121 0 oct 31 19:03 index.html
+
+CESCA@LAB02-PC03 MINGW64 ~/Desktop/Nueva carpeta
+$ gti init
+bash: gti: command not found
+
+CESCA@LAB02-PC03 MINGW64 ~/Desktop/Nueva carpeta
+$ git init
+Initialized empty Git repository in C:/Users/CESCA/Desktop/Nueva carpeta/.git/
+
+CESCA@LAB02-PC03 MINGW64 ~/Desktop/Nueva carpeta (master)
+$ ls -al
+total 8
+drwxr-xr-x 1 CESCA 197121 0 oct 31 19:05 ./
+drwxr-xr-x 1 CESCA 197121 0 oct 31 19:01 ../
+drwxr-xr-x 1 CESCA 197121 0 oct 31 19:05 .git/
+-rw-r--r-- 1 CESCA 197121 0 oct 31 19:03 index.html
+
+
+CESCA@LAB02-PC03 MINGW64 ~/Desktop/Nueva carpeta (master)
+$ code index.html
+
+CESCA@LAB02-PC03 MINGW64 ~/Desktop/Nueva carpeta (master)
+$ html:
+bash: html:: command not found
+
+CESCA@LAB02-PC03 MINGW64 ~/Desktop/Nueva carpeta (master)
+$ git add index.html
+
+CESCA@LAB02-PC03 MINGW64 ~/Desktop/Nueva carpeta (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+CESCA@LAB02-PC03 MINGW64 ~/Desktop/Nueva carpeta (master)
+$ git commit -m "mi primer commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'CESCA@LAB02-PC03.(none)')
+
+CESCA@LAB02-PC03 MINGW64 ~/Desktop/Nueva carpeta (master)
+$ ^C
+
+CESCA@LAB02-PC03 MINGW64 ~/Desktop/Nueva carpeta (master)
+$ git config --global user.email "grinch.ssas@gmail.com"
+
+CESCA@LAB02-PC03 MINGW64 ~/Desktop/Nueva carpeta (master)
+$ git config --global user.name "santos saldaña"
+
+CESCA@LAB02-PC03 MINGW64 ~/Desktop/Nueva carpeta (master)
+$ git config -l
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+rebase.autosquash=true
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+http.sslbackend=openssl
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge --skip -- %f
+filter.lfs.process=git-lfs filter-process --skip
+filter.lfs.required=true
+credential.helper=manager
+core.editor="C:\Users\CESCA\AppData\Local\Programs\Microsoft VS Code\Code.exe" --wait
+user.email=grinch.ssas@gmail.com
+user.name=santos saldaña
+core.repositoryformatversion=0
+core.filemode=false
+:
+
+SISTEMA DE CONTROL DE VERSIONES
+
+--COMANDOS--
+PWD-> indica la ruta actual
+cd <directorio>->ingresa un dirctorio
+cd ..=>retorna un directorio
+touch <archivo.extension>=> crea un archivo
+mkdir =>crea una carpeta
+git init=>inicializa un repositorio
+git add <archivo>=>agrega un archivo o diectorio al area de prepraracion staging()
+git commit -m"" =>envia un archivo del staghing al repositorio
+git log=> muestra un historial de commits(version) de un proyecto
+git show=>muestra el ultimo cambio en el proyecto
+git branch<nombre_rama>=>crea una rama
+git merge <rama>=>permite traer los cambios de una rama a otra
+git checkout=>permite visualizar el contenido de un commit
